@@ -1,0 +1,45 @@
+{% extends 'store/main.html' %} 
+
+{% block body %} 
+<main class="form-signin w-50 m-auto">
+    <form method="post">
+        {% csrf_token %}
+      
+      <h1 class="h3 mb-3 fw-normal text-center">Registration</h1>
+  
+      <div class="form-floating">
+        <label for="floatingInput">Username</label>
+        <input type="text" class="form-control" id="floatingInput" name="username" placeholder="admin">
+        
+      </div>
+      <div class="form-floating mt-3">
+        <label for="floatingInput">Email</label>
+        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+      <div class="form-floating mt-3 ">
+        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" name="password1" placeholder="Password">
+    </div>
+</div>
+    <div class="col-lg-6">
+    <div class="form-floating mt-3">
+        <label for="floatingPassword">Password again</label>
+        <input type="password" class="form-control" id="floatingPassword" name="password2" placeholder="Password">
+    </div>
+</div>
+        
+      
+    </div>
+    <p class="nha">Have account? <a href="">Sign in</a> </p>
+  
+   
+      <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign in</button>
+      
+    </form>
+  </main>
+
+
+{% endblock %} 
